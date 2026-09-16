@@ -532,4 +532,19 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('%cMercury India Compliance — Ready ✔', 'color:#0a7272;font-weight:bold;font-size:14px;');
 });
 
+function sendMail() {
 
+    let params = {
+        first_name: document.getElementById("firstName").value,
+        last_name: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        country: document.getElementById("country").value,
+        message: document.getElementById("message").value
+    };
+
+    return emailjs.send(
+        "service_usbs0h4",
+        "template_65t3kgc",
+        params
+    );
+}

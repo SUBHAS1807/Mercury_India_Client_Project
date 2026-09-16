@@ -25,6 +25,16 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "FWSajaJWhGqPrM6c1",
+      });
+   })();
+</script>
 </head>
 <body>
 
@@ -728,7 +738,7 @@
 
               <!-- Submit Button -->
               <div class="form-actions">
-                <button type="submit" class="btn btn-submit" id="contact-submit-btn">
+                <button type="submit" class="btn btn-submit" id="contact-submit-btn" onclick="sendMail()"">
                   <span class="btn-text">Submit</span>
                 </button>
                 <span class="form-security-note">
